@@ -1,0 +1,23 @@
+import pygame
+pygame.init()
+win = pygame.display.set_mode((250,250))
+
+color = (255,255,255)
+win.fill(color)
+pygame.display.update()
+
+for g in range(3):
+    for i in range(3):
+        pygame.draw.rect(win,(0,0,0),(i*100,g *100,50,50))
+        pygame.draw.rect(win, (0, 0, 0), (50+i * 100,50+ g * 100, 50, 50))
+
+
+
+pygame.display.update()
+
+
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            exit()
+            
